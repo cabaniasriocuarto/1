@@ -575,6 +575,46 @@ slider {
     grid-template-columns: repeat(2, 1fr);
   }
   .slides img {
+/* Botón menú hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  header nav .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #0f0f0f;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+  header nav .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Tarifas scroll horizontal */
+  .tarifas-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+  }
+  .tarifa-card {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+  }
+}
+
     height: 250px;
   }
   .contacto-container {
