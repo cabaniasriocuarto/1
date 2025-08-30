@@ -6,7 +6,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const slidesContainer = document.querySelector('.slides');
-  const images = document.querySelectorAll('.slides img');
+  const slideItems = document.querySelectorAll('.slides img, .slides video');
   const prevButton = document.querySelector('.slider .prev');
   const nextButton = document.querySelector('.slider .next');
   const lightbox = document.getElementById('lightbox');
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxClose = document.querySelector('.lightbox .close');
 
   let currentIndex = 0;
-  const totalSlides = images.length;
+  const totalSlides = slideItems.length;
 // Menú hamburguesa
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
